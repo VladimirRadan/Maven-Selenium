@@ -1,7 +1,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Maven-Selenium suite">
+
     <test name="Chrome tests">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="username" value="tomsmith"></parameter>
+        <parameter name="password" value="SuperSecretPassword!"></parameter>
         <groups>
             <run>
                 <include name="smoke"></include>
@@ -14,6 +18,9 @@
         </classes>
     </test>
     <test name="Firefox tests">
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="username" value="tomsmith"></parameter>
+        <parameter name="password" value="SuperSecretPassword!"></parameter>
         <groups>
             <run>
                 <include name="smoke"></include>

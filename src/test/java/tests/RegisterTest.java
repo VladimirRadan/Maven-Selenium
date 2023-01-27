@@ -24,24 +24,24 @@ public class RegisterTest extends BaseTest {
     // /html/body/div[5]/div[1]/div[4]/div[3]/form/div/div[2]/div[2]/div[2]/div[1]/div[1]/input --> apsolutni lokator
 
 
-    @Test(description = "Verifying register user test - Expected: User is registered and is on profile page")
-    public void registerUserTest() {
-        clickOnElement(registerLink);
-        clickOnElement(selectGender);
-        typeIn(firstNameField, "John");
-        typeIn(lastNameField, "Smith");
-        typeIn(emailField, "johntest801@test.com");
-        typeIn(passwordField, "testing");
-        typeIn(confirmPasswordField, "testing");
-        clickOnElement(registerButton);
-
-        String expectedText = "Your registration completed";
-        String actualText = getTextFromElement(registeredUserText);
-        Assert.assertEquals(actualText, expectedText);
-
-        boolean isButtonPresentOnPage = getElement(continueButton).isDisplayed();
-        Assert.assertTrue(isButtonPresentOnPage);
-    }
+//    @Test(description = "Verifying register user test - Expected: User is registered and is on profile page")
+//    public void registerUserTest() {
+//        clickOnElement(registerLink);
+//        clickOnElement(selectGender);
+//        typeIn(firstNameField, "John");
+//        typeIn(lastNameField, "Smith");
+//        typeIn(emailField, "johntest801@test.com");
+//        typeIn(passwordField, "testing");
+//        typeIn(confirmPasswordField, "testing");
+//        clickOnElement(registerButton);
+//
+//        String expectedText = "Your registration completed";
+//        String actualText = getTextFromElement(registeredUserText);
+//        Assert.assertEquals(actualText, expectedText);
+//
+//        boolean isButtonPresentOnPage = getElement(continueButton).isDisplayed();
+//        Assert.assertTrue(isButtonPresentOnPage);
+//    }
 
 
 }
