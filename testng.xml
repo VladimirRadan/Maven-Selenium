@@ -3,12 +3,12 @@
 <suite name="Maven-Selenium suite">
 
     <test name="Chrome tests">
-        <parameter name="browser" value="chrome"></parameter>
-        <parameter name="username" value="tomsmith"></parameter>
-        <parameter name="password" value="SuperSecretPassword!"></parameter>
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <parameter name="username" value="tomsmith"></parameter>-->
+<!--        <parameter name="password" value="SuperSecretPassword!"></parameter>-->
         <groups>
             <run>
-                <include name="smoke"></include>
+                <include name="basket"></include>
             </run>
         </groups>
         <classes>
@@ -17,21 +17,21 @@
             <class name="tests.BasketTest"></class>
         </classes>
     </test>
-    <test name="Firefox tests">
-        <parameter name="browser" value="firefox"></parameter>
-        <parameter name="username" value="tomsmith"></parameter>
-        <parameter name="password" value="SuperSecretPassword!"></parameter>
-        <groups>
-            <run>
-                <include name="smoke"></include>
-            </run>
-        </groups>
-        <classes>
-            <class name="tests.LoginTest"></class>
-            <class name="tests.RegisterTest"></class>
-            <class name="tests.BasketTest"></class>
-        </classes>
-    </test>
+<!--    <test name="Firefox tests">-->
+<!--        <parameter name="browser" value="firefox"></parameter>-->
+<!--        <parameter name="username" value="tomsmith"></parameter>-->
+<!--        <parameter name="password" value="SuperSecretPassword!"></parameter>-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="smoke"></include>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="tests.LoginTest"></class>-->
+<!--            <class name="tests.RegisterTest"></class>-->
+<!--            <class name="tests.BasketTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 
 

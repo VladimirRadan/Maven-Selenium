@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.*;
 import listeners.RetryAnalyzer;
 import listeners.TestListener;
 import org.testng.Assert;
@@ -11,7 +12,11 @@ public class BasketTest extends BaseTest{
 
     BasketPage basketPage;
 
-    @Test(retryAnalyzer = RetryAnalyzer.class)
+    @Test(groups = "basket")
+    @Severity(SeverityLevel.BLOCKER)
+    @Epic("Epic Basket")
+    @Story("Adding products to basket story")
+    @Description("Verifying that price calculation in basket is correct")
     public void addToCartTest(){
         basketPage = new BasketPage(driver);
         basketPage.addProductsToBasket();

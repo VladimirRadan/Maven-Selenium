@@ -1,8 +1,10 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -23,7 +25,7 @@ public class BasketPage extends BasePage{
         super(driver);
     }
 
-
+    @Step("Adding products to basket")
     public void addProductsToBasket(){
         hover(headerMenuComputers);
         hoverAndClick(headerMenuNotebooks);
@@ -33,6 +35,7 @@ public class BasketPage extends BasePage{
         clickOnElement(goToCart);
     }
 
+    @Step("Calculation final price in basket")
     public boolean priceCalculation(){
         List<WebElement> productInCartPrices = getElements(productPrices);
         double sum = 0;
@@ -40,7 +43,8 @@ public class BasketPage extends BasePage{
             sum +=  Double.parseDouble(productInCartPrices.get(i).getText());
         }
         double total = Double.parseDouble(getElement(totalAmount).getText());
-        return sum == total + 1; // dodat 1 za failovanje testa
+        //Assert.assertTrue();
+        return sum == total;
     }
 
 
